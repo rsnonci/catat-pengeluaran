@@ -68,10 +68,15 @@ Liat di .env copy
 ### 4. 💻 Jalankan di Lokal
 
 git clone https://github.com/rsnonci/catat-pengeluaran.git
+
 cd catat-pengeluaran-bot
+
 python -m venv venv
+
 source venv/Scripts/activate    # atau venv\Scripts\activate.bat untuk Windows CMD
+
 pip install discord.py openai==0.28 google-api-python-client google-auth dotenv
+
 python bot.py
 
 ---
@@ -79,4 +84,5 @@ python bot.py
 ### 5. 📢 Contoh Penggunaan
 
 Discord: !catat 15000 beli sabun
+
 Respon Bot: ✅ Dicatat: 15000 untuk beli sabun
