@@ -59,7 +59,8 @@ Tanpa biaya, bisa dijalankan lokal 💻
 2. Pergi ke [API Keys](https://openrouter.ai/account/keys)
 3. Copy API key
 4. Buat file `.env` di root folder:
-```env
+
+env
 Liat di .env copy
 
 ---
