@@ -1,0 +1,5 @@
+discord.py
+openai==0.28 
+google-api-python-client 
+google-auth 
+dotenv

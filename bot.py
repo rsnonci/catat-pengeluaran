@@ -93,6 +93,14 @@ async def on_message(message):
             tanggal = datetime.today().strftime('%Y-%m-%d')
             kategori, jumlah, deskripsi = parts[1], parts[2], parts[3]
 
+            try:
+                jumlah = int(jumlah)
+            except ValueError:
+                await message.channel.send(
+                    "⚠️ Jumlah harus berupa angka. Format yang benar misalnya: `!catat 10000 beli sabun`"
+                )
+                return
+
             row = [[tanggal, kategori, jumlah, deskripsi]]
 
             # Simpan ke Google Sheets
