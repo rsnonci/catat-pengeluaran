@@ -74,8 +74,9 @@ cd catat-pengeluaran-bot
 python -m venv venv
 
 source venv/Scripts/activate    # atau venv\Scripts\activate.bat untuk Windows CMD
+# atau source venv/bin/activate untuk Mac/Linux
 
-pip install discord.py openai==0.28 google-api-python-client google-auth dotenv
+pip install -r requirements.txt
 
 python bot.py
 

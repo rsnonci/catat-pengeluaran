@@ -1,3 +1,4 @@
 .env
-prefab-surfer-309808-92cd527ed6a2.json
+*.json
 venv/
+__pycache__/
