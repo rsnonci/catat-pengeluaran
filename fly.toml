@@ -1,0 +1,17 @@
+# fly.toml app configuration file generated for catat-pengeluaran-wandering-resonance-9341 on 2025-08-01T06:22:05+07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'catat-pengeluaran-wandering-resonance-9341'
+primary_region = 'sin'
+
+[build]
+
+[processes]
+app = "python bot.py"
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1

@@ -1,0 +1,19 @@
+# flyctl launch added from .gitignore
+**\venv
+**\__pycache__
+
+# flyctl launch added from venv\.gitignore
+# Created by venv; see https://docs.python.org/3/library/venv.html
+venv\**\*
+
+# flyctl launch added from venv\Lib\site-packages\debugpy\_vendored\pydevd\_pydevd_frame_eval\.gitignore
+venv\Lib\site-packages\debugpy\_vendored\pydevd\_pydevd_frame_eval\pydevd_frame_evaluator.*.so
+venv\Lib\site-packages\debugpy\_vendored\pydevd\_pydevd_frame_eval\pydevd_frame_evaluator.*.pyd
+venv\Lib\site-packages\debugpy\_vendored\pydevd\_pydevd_frame_eval\pydevd_frame_evaluator.pyx
+
+# flyctl launch added from venv\Lib\site-packages\debugpy\_vendored\pydevd\pydevd_attach_to_process\linux_and_mac\.gitignore
+venv\Lib\site-packages\debugpy\_vendored\pydevd\pydevd_attach_to_process\linux_and_mac\attach_x86.dylib
+venv\Lib\site-packages\debugpy\_vendored\pydevd\pydevd_attach_to_process\linux_and_mac\attach_x86_64.dylib
+venv\Lib\site-packages\debugpy\_vendored\pydevd\pydevd_attach_to_process\linux_and_mac\attach_linux_x86.o
+venv\Lib\site-packages\debugpy\_vendored\pydevd\pydevd_attach_to_process\linux_and_mac\attach_linux_x86_64.o
+fly.toml
