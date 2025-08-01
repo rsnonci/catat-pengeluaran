@@ -6,6 +6,7 @@ from datetime import datetime
 import os
 import re
 from dotenv import load_dotenv
+import asyncio
 
 load_dotenv()
 
@@ -13,6 +14,38 @@ load_dotenv()
 intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
+
+# === KEEP ALIVE TASK ===
+# This task will run every 10 minutes to keep the bot alive
+async def keep_alive():
+    while True:
+        print("Keep alive:", datetime.now())
+        await asyncio.sleep(600)
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+    if message.content.lower() == "ping":
+        await message.channel.send("pong")
+
+async def on_ready():
+    print(f'Bot ready: {client.user}')
+
+    # keep_alive
+    client.loop.create_task(keep_alive())
+
+    #=== HEARTBEAT TASK ===
+    channel_id = int(os.getenv("DISCORD_CHANNEL_ID"))
+    channel = client.get_channel(channel_id)
+
+    async def heartbeat():
+        while True:
+            if channel:
+                await channel.send(f"✅ Bot masih aktif {datetime.now().strftime('%H:%M:%S')}")
+            await asyncio.sleep(3600)
+
+    client.loop.create_task(heartbeat())
 
 # === OPENAI SETUP ===
 openai.api_key = os.getenv("OPEN_API_KEY")

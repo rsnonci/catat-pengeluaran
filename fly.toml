@@ -11,6 +11,9 @@ primary_region = 'sin'
 [processes]
 app = "python bot.py"
 
+[experimental]
+  auto_rollback = true
+
 [[vm]]
   memory = '1gb'
   cpu_kind = 'shared'
